@@ -5,9 +5,9 @@ import {
   NotebookText,
   Palette,
   Phone,
-  Twitter,
   User,
 } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import React from "react";
 import ResponsiveComponent from "../ResponsiveComponent";
@@ -29,7 +29,7 @@ const getIcon = (icon) => {
     case "linkedin":
       return <Linkedin className="w-full h-auto" strokeWidth={1.5} />;
     case "twitter":
-      return <Twitter className="w-full h-auto" strokeWidth={1.5} />;
+      return <FaXTwitter className="w-full h-auto" strokeWidth={1.5} />;
     case "resume":
       return <NotebookText className="w-full h-auto" strokeWidth={1.5} />;
 
@@ -74,7 +74,7 @@ const NavButton = ({
               prefetch={false}
               scroll={false}
             >
-              <span className="relative  w-14 h-14 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent">
+              <span className="relative  w-20 h-20 p-4 animate-spin-slow-reverse group-hover:pause hover:text-accent">
                 {getIcon(icon)}
 
                 <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />

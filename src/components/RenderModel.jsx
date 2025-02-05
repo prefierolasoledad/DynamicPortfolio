@@ -8,9 +8,11 @@ const RenderModel = ({ children, className }) => {
   return (
     <Canvas
       className={clsx("w-screen h-screen -z-10 relative", className)}
-      shadows={false}
+      // shadows={false}
       dpr={[1, 2]}
       // dpr is the device pixel ratio. Here we are setting it to 1 and 2 for retina displays to prevent blurriness in the model rendering on high resolution screens.
+      gl={{ antialias: true, toneMappingExposure: 1.5 }}
+      camera={{ position: [0, 1, 1], fov: 50 }}
     >
       <Suspense fallback={null}>{children}</Suspense>
       <Environment preset="dawn" />
