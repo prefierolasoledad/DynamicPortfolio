@@ -49,7 +49,7 @@ const AboutDetails = () => {
           <img
             className="w-full h-auto"
             src={`https://github-readme-stats.vercel.app/api/top-langs?username=prefierolasoledad&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
-            alt="CodeBucks"
+            alt="ADVENTROZ"
             loading="lazy"
           />
         </ItemLayout>
@@ -58,7 +58,7 @@ const AboutDetails = () => {
           <img
             className="w-full h-auto"
             src={`https://github-readme-stats.vercel.app/api?username=prefierolasoledad&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
-            alt="CodeBucks"
+            alt="ADVENTROZ"
             loading="lazy"
           />
         </ItemLayout>
@@ -67,7 +67,7 @@ const AboutDetails = () => {
           <img
             className="w-full h-auto"
             src={`https://skillicons.dev/icons?i=vscode,aws,python,java,js,react,css,nodejs,aws,gcp,flutter,c,anaconda,androidstudio,cpp,dart,express,git,github,mysql,nextjs,npm,tailwind&theme=light`}
-            alt="CodeBucks"
+            alt="ADVENTROZ"
             loading="lazy"
           />
         </ItemLayout>
@@ -76,21 +76,21 @@ const AboutDetails = () => {
           <img
             className="w-full h-auto"
             src={`https://github-readme-streak-stats.herokuapp.com?user=prefierolasoledad&theme=dark&hide_border=true&type=svg&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B`}
-            alt="CodeBucks"
+            alt="ADVENTROZ"
             loading="lazy"
           />
         </ItemLayout>
 
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
           <Link
-            href="https://github.com/codebucks27/Nextjs-contentlayer-blog"
+            href="https://github.com/prefierolasoledad/DynamicPortfolio"
             target="_blank"
             className="w-full"
           >
             <img
               className="w-full h-auto"
-              src={`https://github-readme-stats.vercel.app/api/pin/?username=prefierolasoledad&repo=dymaicPortfolio&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false&description_lines_count=2`}
-              alt="CodeBucks"
+              src={`https://github-readme-stats.vercel.app/api/pin/?username=prefierolasoledad&repo=DynamicPortfolio&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false&description_lines_count=3`}
+              alt="ADVENTROZ"
               loading="lazy"
             />
           </Link>
