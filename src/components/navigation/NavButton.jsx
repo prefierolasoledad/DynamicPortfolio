@@ -86,7 +86,7 @@ const NavButton = ({
             </NavLink>
           </div>
         ) : (
-          <div className="w-fit cursor-pointer z-50">
+          <div className="w-fit cursor-pointer mt-[-40%] pt-5 z-50">
             <NavLink
               variants={item}
               href={link}
@@ -99,7 +99,7 @@ const NavButton = ({
               prefetch={false}
               scroll={false}
             >
-              <span className="relative  w-10 h-10  xs:w-14 xs:h-14 p-2.5 xs:p-4 hover:text-accent">
+              <span className="relative  w-14 h-14 xs:w-14 xs:h-14 p-2.5 xs:p-4 hover:text-accent">
                 {getIcon(icon)}
 
                 <span className="peer bg-transparent absolute top-0 left-0 w-full h-full" />
