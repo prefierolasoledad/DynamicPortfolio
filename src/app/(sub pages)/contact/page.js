@@ -23,12 +23,12 @@ export default function Contact() {
             Deploy Your Thoughts
           </h1>
           <p className="text-center font-light text-sm xs:text-lg">
-            Whether you're debugging ideas, committing to new collaborations, or  
-            just exploring new frameworks of thought, let's connect. Drop your  
-            message below, and let's build something great together.  
+            Whether you&lsquo;re debugging ideas, committing to new collaborations, or  
+            just exploring new frameworks of thought, let&lsquo;s connect. Drop your  
+            message below, and let&lsquo;s build something great together.  
             From brainstorming innovative solutions to optimizing existing ones,  
             every line of communication brings us closer to pushing boundaries.  
-            Let's architect something meaningful—one message at a time.
+            Let&lsquo;s architect something meaningful—one message at a time.
           </p>
         </div>
         <Form />

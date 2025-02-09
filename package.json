@@ -1,12 +1,15 @@
 {
-  "name": "nextjs-creative-portfolio",
+  "name": "karan-bhatt-portfolio",
+  "homepage": "https://prefierolasoledad.github.io/DynamicPortfolio/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.2.0",
@@ -14,6 +17,7 @@
     "@react-three/fiber": "^8.15.16",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.8",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.344.0",
     "next": "14.2.10",
     "react": "^18",
