@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "npm exec @netlify/next",
     "start": "next start",
     "lint": "next lint",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d out"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@emailjs/browser": "^4.2.0",
@@ -29,6 +30,7 @@
     "three": "^0.162.0"
   },
   "devDependencies": {
+    "@netlify/next": "^1.4.9",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.1",
