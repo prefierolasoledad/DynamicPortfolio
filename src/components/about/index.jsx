@@ -49,9 +49,11 @@ const AboutDetails = () => {
         >
           <Image
             className="w-full h-auto"
-            src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/top-langs?username=prefierolasoledad&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
+            src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/top-langs?username=prefierolasoledad&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false_width=full`}
             alt="ADVENTROZ"
             loading="lazy"
+            width="500"
+            height="500"
           />
         </ItemLayout>
 
@@ -61,6 +63,8 @@ const AboutDetails = () => {
             src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api?username=prefierolasoledad&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false`}
             alt="ADVENTROZ"
             loading="lazy"
+            width="500"
+            height="500"
           />
         </ItemLayout>
 
@@ -70,6 +74,8 @@ const AboutDetails = () => {
             src={`https://skillicons.dev/icons?i=vscode,aws,python,java,js,react,css,nodejs,gcp,flutter,c,anaconda,androidstudio,cpp,dart,express,git,github,mysql,nextjs,npm,tailwind&theme=light`}
             alt="ADVENTROZ"
             loading="lazy"
+            width="500"
+            height="500"
           />
         </ItemLayout>
 
@@ -79,6 +85,8 @@ const AboutDetails = () => {
             src={`${process.env.NEXT_PUBLIC_GITHUB_STREAK_STATS_URL}?user=prefierolasoledad&theme=dark&hide_border=true&type=svg&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B`}
             alt="ADVENTROZ"
             loading="lazy"
+            width="500"
+            height="500"
           />
         </ItemLayout>
 
@@ -93,6 +101,8 @@ const AboutDetails = () => {
               src={`${process.env.NEXT_PUBLIC_GITHUB_STATS_URL}/api/pin/?username=prefierolasoledad&repo=DynamicPortfolio&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false&description_lines_count=3`}
               alt="ADVENTROZ"
               loading="lazy"
+              width="500"
+              height="500"
             />
           </Link>
         </ItemLayout>
