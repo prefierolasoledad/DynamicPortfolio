@@ -87,9 +87,9 @@ export const BtnList = [
     newTab: true,
   },
   {
-    label: "X",
-    link: "https://x.com/Karan12591471",
-    icon: "twitter",
+    label: "Leetcode",
+    link: "https://leetcode.com/u/Karan_Bhatt",
+    icon: "leetcode",
     newTab: true,
   },
   {
