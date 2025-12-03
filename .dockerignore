@@ -1,0 +1,15 @@
+# Dependencies and build artifacts that should not enter the final image
+node_modules
+.next
+out # The build output is handled in the Dockerfile's multi-stage copy, 
+    # but we prevent the initial copy of the contents if the folder exists locally.
+npm-debug.log
+yarn-error.log
+
+# Private and development files (CRUCIAL for security and clean builds)
+.env
+.env.local
+.env.development
+.github
+.gitignore
+Dockerfile
