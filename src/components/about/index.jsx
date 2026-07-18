@@ -13,17 +13,14 @@ const AboutDetails = () => {
           }
         >
           <h2 className="  text-xl md:text-2xl text-left w-full capitalize">
-            Designer of Boundless Possibilities
+            Architect of Scalable Backend Systems
           </h2>
           <p className="font-light  text-xs sm:text-sm md:text-base   ">
-            My journey in web development is fueled by the spirit of exploration, crafting seamless 
-            experiences that transport users across digital landscapes. With TypeScript as my guiding 
-            compass and React.js, Next.js, and Flutter as my trusted tools, I build dynamic and immersive 
-            portals that bridge the gap between travelers and unforgettable experiences. Material-UI and Tailwind CSS 
-            enhance my creations, ensuring both functionality and aesthetic appeal. Backed by Node.js, MySQL, and 
-            OAuth 2.0, I engineer secure and efficient systems, while AI-driven technologies like Cohere and Hugging 
-            Face unlock intelligent interactions. Join me as I continue to push the boundaries of web and mobile innovation 
-            with Adventroz—where technology meets adventure.
+            Backend Engineer experienced in building scalable distributed systems using Node.js, PostgreSQL, Redis, Docker, and cloud
+            infrastructure. Skilled in system design, transactional systems, caching, and real-time applications.
+            Solved 350+ DSA problems on LeetCode with a contest rating of 1692, demonstrating strong problem-solving across arrays,
+            graphs, DP, and sliding-window patterns. With TypeScript, Node.js, and Express.js as my core tools, I engineer secure,
+            high-throughput architectures, while deploying containerized services across AWS and DigitalOcean.
           </p>
         </ItemLayout>
 
@@ -31,7 +28,7 @@ const AboutDetails = () => {
           className={" col-span-full xs:col-span-6 lg:col-span-4 text-accent"}
         >
           <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
-            6+ <sub className="font-semibold text-base">projects</sub>
+            10+ <sub className="font-semibold text-base">projects</sub>
           </p>
         </ItemLayout>
 
@@ -39,7 +36,7 @@ const AboutDetails = () => {
           className={"col-span-full xs:col-span-6 lg:col-span-4 text-accent"}
         >
           <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
-            1+{" "}
+            2+{" "}
             <sub className="font-semibold text-base">years of experience</sub>
           </p>
         </ItemLayout>
@@ -71,7 +68,7 @@ const AboutDetails = () => {
         <ItemLayout className={"col-span-full"}>
           <Image
             className="w-full h-auto"
-            src={`https://skillicons.dev/icons?i=vscode,aws,python,java,js,react,css,nodejs,gcp,flutter,c,anaconda,androidstudio,cpp,dart,express,git,github,mysql,nextjs,npm,tailwind&theme=light`}
+            src={`https://skillicons.dev/icons?i=vscode,aws,python,java,js,react,css,nodejs,gcp,flutter,c,anaconda,androidstudio,cpp,dart,express,git,github,mysql,nextjs,npm,tailwind,postgres,mongodb,redis,docker,nginx&theme=light`}
             alt="ADVENTROZ"
             loading="lazy"
             width="500"
