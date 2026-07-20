@@ -27,7 +27,7 @@ export const projectsData = [
   {
     id: 2,
     name: "Lumina AI",
-    description: "AI exam generator using Gemini AI.",
+    description: "AI-powered teaching platform generating custom exams using Gemini AI.",
     date: "2025-03-15",
     demoLink: "https://github.com/prefierolasoledad/Lumina_AI",
   },
