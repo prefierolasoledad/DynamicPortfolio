@@ -1,7 +1,7 @@
 import Image from "next/image";
-import bg from "../../../../public/background/undefined_image (2).png";
+import bg from "../../../../../public/background/undefined_image (2).png";
 import ProjectList from "@/components/projects";
-import { projectsData } from "../../data";
+import { projectsData } from "@/app/data";
 
 export const metadata = {
   title: "Projects",

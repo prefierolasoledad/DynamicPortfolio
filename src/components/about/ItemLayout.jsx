@@ -7,7 +7,8 @@ const ItemLayout = ({ children, className }) => {
     <motion.div
       initial={{ scale: 0 }}
       whileInView={{ scale: 1 }}
-      transition={{ duration: 0.5 }}
+      whileHover={{ y: -6 }}
+      transition={{ duration: 0.5, y: { type: "spring", stiffness: 300, damping: 20 } }}
       viewport={{ once: true }}
       className={clsx(
         "custom-bg p-6 sm:p-8 rounded-xl flex items-center justify-center space-y-8",

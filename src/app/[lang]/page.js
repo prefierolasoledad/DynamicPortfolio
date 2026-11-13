@@ -1,5 +1,5 @@
 import Image from "next/image";
-import bg from "../../public/background/undefined_image (1).png";
+import bg from "../../../public/background/undefined_image (1).png";
 import RenderModel from "@/components/RenderModel";
 import Navigation from "@/components/navigation";
 
@@ -8,7 +8,7 @@ const Wizard = dynamic(() => import("@/components/models/Wizard"), {
   ssr: false,
 });
 
-export default function Home() {
+export default function Home({ params }) {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative">
       <Image
@@ -23,7 +23,7 @@ export default function Home() {
       <div className="w-full h-screen">
         <Navigation />
         <RenderModel>
-          <Wizard />
+          <Wizard lang={params.lang} />
         </RenderModel>
       </div>
     </main>

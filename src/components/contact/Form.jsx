@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
 import { motion } from "framer-motion";
+import { useI18n } from "@/i18n/I18nProvider";
 
 const container = {
   hidden: { opacity: 0 },
@@ -22,6 +23,8 @@ const item = {
 };
 
 export default function Form() {
+  const { dict } = useI18n();
+  const t = dict.contact.form;
   const {
     register,
     handleSubmit,
@@ -29,7 +32,19 @@ export default function Form() {
   } = useForm();
 
   const sendEmail = (params) => {
-    const toastId = toast.loading("Sending your message, please wait...");
+    if (
+      !process.env.NEXT_PUBLIC_SERVICE_ID ||
+      !process.env.NEXT_PUBLIC_TEMPLATE_ID ||
+      !process.env.NEXT_PUBLIC_PUBLIC_KEY
+    ) {
+      console.error(
+        "EmailJS is not configured: set NEXT_PUBLIC_SERVICE_ID, NEXT_PUBLIC_TEMPLATE_ID and NEXT_PUBLIC_PUBLIC_KEY in .env.local"
+      );
+      toast.error(t.notConfigured);
+      return;
+    }
+
+    const toastId = toast.loading(t.sending);
 
     // toast.info(
     //   "Form submissions are demo-only here. Please checkout the final code repo to enable it. If you want to connect you can reach out to me via codebucks27@gmail.com.",
@@ -55,7 +70,7 @@ export default function Form() {
       .then(
         () => {
           toast.success(
-            "I have received your message, I will get back to you soon!",
+            t.success,
             {
               id: toastId,
             }
@@ -64,7 +79,7 @@ export default function Form() {
         (error) => {
           console.log("FAILED...", error.text);
           toast.error(
-            "There was an error sending your message, please try again later!",
+            t.error,
             {
               id: toastId,
             }
@@ -97,12 +112,12 @@ export default function Form() {
         <motion.input
           variants={item}
           type="text"
-          placeholder="name"
+          placeholder={t.name}
           {...register("name", {
-            required: "This field is required!",
+            required: t.required,
             minLength: {
               value: 3,
-              message: "Name should be atleast 3 characters long.",
+              message: t.nameMin,
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
@@ -115,8 +130,8 @@ export default function Form() {
         <motion.input
           variants={item}
           type="email"
-          placeholder="email"
-          {...register("email", { required: "This field is required!" })}
+          placeholder={t.email}
+          {...register("email", { required: t.required })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
         />
         {errors.email && (
@@ -126,16 +141,16 @@ export default function Form() {
         )}
         <motion.textarea
           variants={item}
-          placeholder="message"
+          placeholder={t.message}
           {...register("message", {
-            required: "This field is required!",
+            required: t.required,
             maxLength: {
               value: 500,
-              message: "Message should be less than 500 characters",
+              message: t.messageMax,
             },
             minLength: {
               value: 50,
-              message: "Message should be more than 50 characters",
+              message: t.messageMin,
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
@@ -148,7 +163,7 @@ export default function Form() {
 
         <motion.input
           variants={item}
-          value="Execute your message!"
+          value={t.submit}
           className="px-10 py-4 rounded-md shadow-lg bg-background border border-accent/30 border-solid
       hover:shadow-glass-sm backdrop-blur-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer capitalize
       "

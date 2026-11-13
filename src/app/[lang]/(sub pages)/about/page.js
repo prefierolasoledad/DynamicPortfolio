@@ -1,7 +1,10 @@
 import Image from "next/image";
-import bg from "../../../../public/background/undefined_image (1).png";
+import bg from "../../../../../public/background/undefined_image (1).png";
 import RenderModel from "@/components/RenderModel";
 import AboutDetails from "@/components/about";
+import Typewriter from "@/components/about/Typewriter";
+import clsx from "clsx";
+import { getDictionary } from "@/i18n";
 import dynamic from "next/dynamic";
 const HatModel = dynamic(() => import("@/components/models/HatModel"), {
   ssr: false,
@@ -11,7 +14,8 @@ export const metadata = {
   title: "About",
 };
 
-export default function Home() {
+export default function Home({ params }) {
+  const { about } = getDictionary(params.lang);
   return (
     <>
       <Image
@@ -30,12 +34,22 @@ export default function Home() {
 
       <div className="relative w-full h-screen flex flex-col items-center justify-center">
         <div className="absolute flex flex-col items-center text-center top-1/2 sm:top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2">
-          <h1 className="font-bold  text-6xl xs:text-7xl sm:text-8xl  lg:text-9xl text-accent">
-            KaranBhatt
+          <h1
+            className={clsx(
+              "font-bold text-accent whitespace-nowrap",
+              // Japanese glyphs are full-width, so the name needs a smaller size to fit.
+              params.lang === "jp"
+                ? "text-5xl xs:text-6xl sm:text-7xl lg:text-8xl"
+                : "text-6xl xs:text-7xl sm:text-8xl lg:text-9xl"
+            )}
+          >
+            {about.name}
           </h1>
-          <p className="font-light text-foreground text-lg">
-            Meet the Programmer behind this portfolio
-          </p>
+          <p className="font-light text-foreground text-lg">{about.subtitle}</p>
+          <Typewriter
+            lines={about.roleLines}
+            className="mt-3 min-h-[1.75rem] font-light text-accent text-sm xs:text-base sm:text-lg"
+          />
         </div>
       </div>
 

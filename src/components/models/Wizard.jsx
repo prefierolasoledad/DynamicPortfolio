@@ -1,16 +1,30 @@
 "use client"
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useMemo } from 'react'
+import { Html, useGLTF } from '@react-three/drei'
+import SpeechBubble from '@/components/SpeechBubble'
+import { greetings } from '@/app/data'
 
-export default function Wizard(props) {
+// Her mouth, in this model's coordinates (from the mesh bounds in maid.glb).
+const MOUTH = [-0.03, 1.21, 0]
+
+export default function Wizard({ lang = 'en', ...props }) {
   const { nodes, materials } = useGLTF('/models/maid.glb')
+  // Greet in the page's language first, then cycle through the others.
+  const messages = useMemo(() => {
+    const start = Math.max(0, greetings.findIndex((g) => g.locale === lang))
+    return [...greetings.slice(start), ...greetings.slice(0, start)]
+  }, [lang])
   return (
-    <group {...props} 
+    <group {...props}
     dispose={null}
       position={[0,-0.5,0]}
       scale={[0.6,0.6,0.6]}
       rotation={[-0.8,0.3,0]}
     >
+      {/* Speech bubble anchored to her mouth, so it follows the model. */}
+      <Html position={MOUTH} zIndexRange={[10, 0]} style={{ pointerEvents: 'none' }}>
+        <SpeechBubble messages={messages} />
+      </Html>
       <group position={[0, 1.167, -0.894]}>
         <mesh
           castShadow

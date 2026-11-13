@@ -5,6 +5,8 @@ import NavButton from "./NavButton";
 import useScreenSize from "../hooks/useScreenSize";
 import ResponsiveComponent from "../ResponsiveComponent";
 import { motion } from "framer-motion";
+import { useI18n } from "@/i18n/I18nProvider";
+import { localizeHref } from "@/i18n/config";
 
 const container = {
   hidden: { opacity: 0 },
@@ -17,7 +19,15 @@ const container = {
 };
 
 const Navigation = () => {
-  const angleIncrement = 360 / BtnList.length;
+  const { lang, dict } = useI18n();
+  // Translated labels; site pages get the language prefix (/hi/about),
+  // external links and the resume PDF (newTab) stay as they are.
+  const buttons = BtnList.map((btn) => ({
+    ...btn,
+    label: dict.nav[btn.icon] ?? btn.label,
+    link: btn.newTab ? btn.link : localizeHref(lang, btn.link),
+  }));
+  const angleIncrement = 360 / buttons.length;
   const size = useScreenSize();
   const isLarge = size >= 1024;
   const isMedium = size >= 768;
@@ -33,7 +43,7 @@ const Navigation = () => {
               animate="show"
               className="w-max flex items-center justify-center relative hover:pause animate-spin-slow group"
             >
-              {BtnList.map((btn, index) => {
+              {buttons.map((btn, index) => {
                 const angleRad = (index * angleIncrement * Math.PI) / 180;
                 const radius = isLarge
                   ? "calc(20vw - 1rem)"
@@ -43,7 +53,7 @@ const Navigation = () => {
                 const x = `calc(${radius}*${Math.cos(angleRad)})`;
                 const y = `calc(${radius}*${Math.sin(angleRad)})`;
 
-                return <NavButton key={btn.label} x={x} y={y} {...btn} />;
+                return <NavButton key={btn.icon} x={x} y={y} {...btn} />;
               })}
             </motion.div>
           ) : (
@@ -52,10 +62,10 @@ const Navigation = () => {
                 variants={container}
                 initial="hidden"
                 animate="show"
-                className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 item-start xs:items-center justify-center relative  group xs:hidden"
+                className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-start xs:items-center justify-center relative  group xs:hidden"
               >
-                {BtnList.slice(0, BtnList.length / 2).map((btn) => {
-                  return <NavButton key={btn.label} x={0} y={0} {...btn} />;
+                {buttons.slice(0, buttons.length / 2).map((btn) => {
+                  return <NavButton key={btn.icon} x={0} y={0} {...btn} />;
                 })}
               </motion.div>
 
@@ -65,11 +75,11 @@ const Navigation = () => {
                 animate="show"
                 className="w-full px-2.5 xs:p-0 xs:w-max flex flex-col space-y-4 items-end xs:items-center justify-center relative group xs:hidden"
               >
-                {BtnList.slice(BtnList.length / 2, BtnList.length).map(
+                {buttons.slice(buttons.length / 2, buttons.length).map(
                   (btn) => {
                     return (
                       <NavButton
-                        key={btn.label}
+                        key={btn.icon}
                         x={0}
                         y={0}
                         {...btn}
