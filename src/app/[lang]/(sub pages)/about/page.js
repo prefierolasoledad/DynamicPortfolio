@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { buildMetadata } from "@/i18n/seo";
 import bg from "../../../../../public/background/undefined_image (1).png";
 import RenderModel from "@/components/RenderModel";
 import AboutDetails from "@/components/about";
@@ -10,9 +11,8 @@ const HatModel = dynamic(() => import("@/components/models/HatModel"), {
   ssr: false,
 });
 
-export const metadata = {
-  title: "About",
-};
+export const generateMetadata = ({ params }) =>
+  buildMetadata(params.lang, "about");
 
 export default function Home({ params }) {
   const { about } = getDictionary(params.lang);
@@ -22,7 +22,7 @@ export default function Home({ params }) {
         src={bg}
         priority
         sizes="100vw"
-        alt="Next.js Portfolio website's about page background image"
+        alt=""
         className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-50"
       />
 

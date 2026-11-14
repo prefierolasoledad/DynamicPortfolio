@@ -4,6 +4,49 @@ const en = {
     description:
       "A unique creative portfolio designed by Karan Bhatt with cutting-edge technologies like Next.js, Tailwind CSS, Three.js, and Framer Motion.",
   },
+  // Search engines and link previews (see src/i18n/seo.js).
+  seo: {
+    "siteName": "Karan Bhatt",
+    "titleTemplate": "%s | Karan Bhatt",
+    "ogLocale": "en_US",
+    "personDescription": "Backend engineer building scalable distributed systems with Node.js, TypeScript, PostgreSQL, Redis and Kafka, moving into NLP research on machine translation for low-resource Indian languages.",
+    "jobTitle": "Backend Engineer",
+    "keywords": [
+      "Karan Bhatt",
+      "backend engineer",
+      "Node.js developer",
+      "TypeScript",
+      "PostgreSQL",
+      "Redis",
+      "Kafka",
+      "distributed systems",
+      "system design",
+      "NLP",
+      "machine translation",
+      "Indian languages",
+      "portfolio",
+      "New Delhi"
+    ],
+    "ogImageAlt": "Karan Bhatt: Backend Engineer → NLP Researcher. Portfolio preview with a 3D character saying hello.",
+    "pages": {
+      "home": {
+        "title": "Karan Bhatt | Backend Engineer → NLP Researcher",
+        "description": "Portfolio of Karan Bhatt, a backend engineer (Node.js, TypeScript, PostgreSQL, Redis, Kafka) moving into NLP research on machine translation for Indian languages."
+      },
+      "about": {
+        "title": "About",
+        "description": "Karan Bhatt: SDE intern at GSX Solutions, co-founder of Adventroz, 400+ LeetCode problems solved, now researching tourism translation for low-resource Indian languages."
+      },
+      "projects": {
+        "title": "Projects",
+        "description": "Projects by Karan Bhatt: Kintsugi, a marketplace with Stripe, Kafka and Kubernetes; Lumina AI exam generator; a real-time Kanban; cursor-paginated APIs and more."
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "Get in touch with Karan Bhatt about backend engineering roles, NLP research, internships or collaborations."
+      }
+    }
+  },
   switcher: { label: "Change language" },
   nav: {
     home: "Home",

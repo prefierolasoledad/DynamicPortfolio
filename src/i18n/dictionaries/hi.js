@@ -4,6 +4,46 @@ const hi = {
     description:
       "Next.js, Tailwind CSS, Three.js और Framer Motion जैसी आधुनिक तकनीकों से बना करन भट्ट का क्रिएटिव पोर्टफ़ोलियो।",
   },
+  // Search engines and link previews (see src/i18n/seo.js).
+  seo: {
+    "siteName": "करन भट्ट",
+    "titleTemplate": "%s | करन भट्ट",
+    "ogLocale": "hi_IN",
+    "personDescription": "Node.js, TypeScript, PostgreSQL, Redis और Kafka से स्केलेबल डिस्ट्रिब्यूटेड सिस्टम बनाने वाले बैकएंड इंजीनियर, जो अब कम संसाधन वाली भारतीय भाषाओं के लिए मशीन ट्रांसलेशन पर NLP रिसर्च की ओर बढ़ रहे हैं।",
+    "jobTitle": "बैकएंड इंजीनियर",
+    "keywords": [
+      "करन भट्ट",
+      "Karan Bhatt",
+      "बैकएंड इंजीनियर",
+      "Node.js डेवलपर",
+      "TypeScript",
+      "PostgreSQL",
+      "मशीन ट्रांसलेशन",
+      "भारतीय भाषाएँ",
+      "NLP",
+      "पोर्टफ़ोलियो",
+      "नई दिल्ली"
+    ],
+    "ogImageAlt": "करन भट्ट: बैकएंड इंजीनियर → NLP रिसर्चर। नमस्ते कहते 3D किरदार के साथ पोर्टफ़ोलियो की झलक।",
+    "pages": {
+      "home": {
+        "title": "करन भट्ट | बैकएंड इंजीनियर → NLP रिसर्चर",
+        "description": "करन भट्ट का पोर्टफ़ोलियो: Node.js, TypeScript, PostgreSQL, Redis और Kafka पर काम करने वाले बैकएंड इंजीनियर, जो भारतीय भाषाओं के मशीन ट्रांसलेशन पर NLP रिसर्च कर रहे हैं।"
+      },
+      "about": {
+        "title": "परिचय",
+        "description": "करन भट्ट: GSX Solutions में SDE इंटर्न, Adventroz के सह-संस्थापक, 400+ LeetCode सवाल हल किए, अब भारतीय भाषाओं में पर्यटन अनुवाद पर रिसर्च।"
+      },
+      "projects": {
+        "title": "प्रोजेक्ट्स",
+        "description": "करन भट्ट के प्रोजेक्ट्स: Stripe, Kafka और Kubernetes वाला Kintsugi मार्केटप्लेस, Lumina AI परीक्षा जनरेटर, रियल-टाइम कानबन और भी बहुत कुछ।"
+      },
+      "contact": {
+        "title": "संपर्क",
+        "description": "बैकएंड इंजीनियरिंग, NLP रिसर्च, इंटर्नशिप या कोलैबोरेशन के लिए करन भट्ट से संपर्क करें।"
+      }
+    }
+  },
   switcher: { label: "भाषा बदलें" },
   nav: {
     home: "होम",

@@ -4,6 +4,46 @@ const jp = {
     description:
       "Next.js、Tailwind CSS、Three.js、Framer Motionなどの最新技術で作られた、カラン・バットのクリエイティブなポートフォリオ。",
   },
+  // Search engines and link previews (see src/i18n/seo.js).
+  seo: {
+    "siteName": "カラン・バット",
+    "titleTemplate": "%s | カラン・バット",
+    "ogLocale": "ja_JP",
+    "personDescription": "Node.js、TypeScript、PostgreSQL、Redis、Kafkaでスケーラブルな分散システムを構築するバックエンドエンジニア。リソースの少ないインドの言語の機械翻訳を中心に、NLP研究へと歩みを進めています。",
+    "jobTitle": "バックエンドエンジニア",
+    "keywords": [
+      "カラン・バット",
+      "Karan Bhatt",
+      "バックエンドエンジニア",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "分散システム",
+      "機械翻訳",
+      "インドの言語",
+      "NLP",
+      "ポートフォリオ"
+    ],
+    "ogImageAlt": "カラン・バット：バックエンドエンジニア → NLP研究者。あいさつする3Dキャラクターが登場するポートフォリオのプレビュー。",
+    "pages": {
+      "home": {
+        "title": "カラン・バット | バックエンドエンジニア → NLP研究者",
+        "description": "カラン・バットのポートフォリオ。Node.js・TypeScript・PostgreSQL・Redis・Kafkaを扱うバックエンドエンジニアとして、インドの言語の機械翻訳に関するNLP研究に取り組んでいます。"
+      },
+      "about": {
+        "title": "自己紹介",
+        "description": "カラン・バット：GSX SolutionsのSDEインターン、Adventroz共同創業者。LeetCodeで400問以上を解き、現在はインドの言語の観光翻訳を研究しています。"
+      },
+      "projects": {
+        "title": "プロジェクト",
+        "description": "カラン・バットのプロジェクト：Stripe・Kafka・Kubernetesを使ったマーケットプレイスKintsugi、AI試験作成ツールLumina AI、リアルタイムかんばんなど。"
+      },
+      "contact": {
+        "title": "お問い合わせ",
+        "description": "バックエンド開発、NLP研究、インターンシップやコラボレーションのご相談はこちらからカラン・バットへ。"
+      }
+    }
+  },
   switcher: { label: "言語を切り替える" },
   nav: {
     home: "ホーム",

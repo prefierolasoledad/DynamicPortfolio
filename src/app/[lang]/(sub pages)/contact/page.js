@@ -1,11 +1,11 @@
 import Image from "next/image";
+import { buildMetadata } from "@/i18n/seo";
 import bg from "../../../../../public/background/undefined_image (4).png";
 import Form from "@/components/contact/Form";
 import { getDictionary } from "@/i18n";
 
-export const metadata = {
-  title: "Contact",
-};
+export const generateMetadata = ({ params }) =>
+  buildMetadata(params.lang, "contact");
 
 export default function Contact({ params }) {
   const { contact } = getDictionary(params.lang);
@@ -13,7 +13,7 @@ export default function Contact({ params }) {
     <>
       <Image
         src={bg}
-        alt="Next.js Portfolio website's contact page background image"
+        alt=""
         priority
         sizes="100vw"
         className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-50"
